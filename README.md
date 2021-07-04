@@ -16,6 +16,7 @@ This library is loosely based on
 
 <details>
 <summary>Table of contents</summary>
+
 ## Table of contents
 
 - [Installation](#installation)
