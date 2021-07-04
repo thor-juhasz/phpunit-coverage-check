@@ -105,7 +105,22 @@ jobs:
       - name: Test coverage
         run: ./phpunit-coverage-check -t 100 clover.xml
 
-      - name: Coveralls GitHub Action
+      - name: Upload coverage results to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.github_token }}
+          COVERALLS_PARALLEL: true
+          COVERALLS_FLAG_NAME: php-${{ matrix.php-version }}
+        run: |
+          composer global require twinh/php-coveralls
+          php-coveralls --coverage_clover=clover.xml -v
+
+  coveralls-finished:
+    needs: tests
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Coveralls finished
         uses: coverallsapp/github-action@v1.1.2
         with:
           github-token: ${{ secrets.github_token }}
+          parallel-finished: true
