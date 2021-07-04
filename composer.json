@@ -12,6 +12,8 @@
     ],
     "require": {
         "php": ">=7.4",
+        "ext-bcmath": "*",
+        "ext-simplexml": "*",
         "symfony/console": "4.*|5.*"
     },
     "require-dev": {
