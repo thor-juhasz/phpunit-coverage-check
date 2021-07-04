@@ -1,4 +1,4 @@
-name: Tests
+name: CI
 
 on:
   push:
@@ -39,9 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer config github-oauth.github.com ${{ secrets.COMPOSER_OAUTH_TOKEN }}
           composer install --no-progress --ansi --ignore-platform-reqs --no-scripts
-          composer config --unset github-oauth.github.com
       - name: Run Psalm analysis
         run: php vendor/bin/psalm --output-format=github --no-progress
 
@@ -105,4 +103,4 @@ jobs:
         run: ./vendor/bin/phpunit --coverage-clover clover.xml
 
       - name: Test coverage
-        run: php ./bin/test-coverage-checker clover.xml 100
+        run: ./phpunit-coverage-check -t 100 clover.xml
