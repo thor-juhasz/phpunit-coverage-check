@@ -111,8 +111,10 @@ jobs:
           COVERALLS_PARALLEL: true
           COVERALLS_FLAG_NAME: php-${{ matrix.php-version }}
         run: |
+          mkdir -p build/logs
+          mv clover.xml build/logs/
           composer global require twinh/php-coveralls
-          php-coveralls --coverage_clover=clover.xml -v
+          php-coveralls --coverage_clover=build/logs/clover.xml -v
 
   coveralls-finished:
     needs: tests
