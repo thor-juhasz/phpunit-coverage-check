@@ -113,7 +113,7 @@ jobs:
         run: |
           mkdir -p build/logs
           mv clover.xml build/logs/
-          composer global require twinh/php-coveralls
+          composer global require php-coveralls/php-coveralls
           php-coveralls --coverage_clover=build/logs/clover.xml -v
 
   coveralls-finished:
