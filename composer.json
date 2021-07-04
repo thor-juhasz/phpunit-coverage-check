@@ -18,6 +18,7 @@
         "vimeo/psalm": "^4.8",
         "phpunit/phpunit": "^9"
     },
+    "bin": ["phpunit-coverage-check"],
     "autoload": {
         "psr-4": {
             "PHPUnitCoverageCheck\\": "src/"
