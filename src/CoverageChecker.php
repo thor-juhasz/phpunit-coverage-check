@@ -94,12 +94,24 @@ class CoverageChecker extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // Name of clover.xml file
+        /** @var string|bool|int|float|null $file */
         $file = $input->getArgument('file');
+        if ($file !== null) {
+            $file = (string) $file;
+        }
 
-        // Options
-        $threshold      = $input->getOption('threshold');
+        /** @var string|bool|int|float|null $threshold */
+        $threshold = $input->getOption('threshold');
+        if ($threshold !== null) {
+            $threshold = (string) $threshold;
+        }
+
+        /** @var string|bool|int|float|null $metric */
         $metric         = $input->getOption('metric');
+        if ($metric !== null) {
+            $metric = (string) $metric;
+        }
+
         $suppressErrors = (bool) $input->getOption('suppress-errors');
 
         // Validate
@@ -127,13 +139,13 @@ class CoverageChecker extends Command
 
     /**
      * @param mixed $file
-     * @param mixed $threshold
-     * @param mixed $metric
+     * @param string|null $threshold
+     * @param string|int|null $metric
      *
      * @throws InvalidArgumentException
      * @throws OutOfRangeException
      */
-    private function validate($file, $threshold, $metric): void
+    private function validate($file, ?string $threshold, $metric): void
     {
         if (is_string($file) === false) {
             throw new InvalidArgumentException(
@@ -168,22 +180,10 @@ class CoverageChecker extends Command
         }
 
         if (in_array($metric, static::$allowedMetrics) === false) {
-            $givenMetric = gettype($metric);
-            switch (gettype($metric)) {
-                case "boolean":
-                    $givenMetric = $metric ? "true" : "false";
-                    break;
-                case "string":
-                case "double":
-                case "integer":
-                    $givenMetric = $metric;
-                    break;
-            }
-
             $message = sprintf(
                 'The metric to be measured must be one of "%s". %s given.',
                 join(", ", static::$allowedMetrics),
-                $givenMetric
+                $metric ?: 'null'
             );
             throw new InvalidARgumentException($message);
         }
