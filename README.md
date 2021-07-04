@@ -1,8 +1,11 @@
 
 # phpunit-coverage-check
 
-[![Coverage Status](https://coveralls.io/repos/github/thor-juhasz/phpunit-coverage-check/badge.svg?branch=master)](https://coveralls.io/github/thor-juhasz/phpunit-coverage-check?branch=master)
 [![CI workflow](https://github.com/thor-juhasz/phpunit-coverage-check/actions/workflows/ci.yaml/badge.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/actions)
+[![Coverage Status](https://coveralls.io/repos/github/thor-juhasz/phpunit-coverage-check/badge.svg?branch=master)](https://coveralls.io/github/thor-juhasz/phpunit-coverage-check?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thor-juhasz/phpunit-coverage-check/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/thor-juhasz/phpunit-coverage-check/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/thor-juhasz/phpunit-coverage-check/badges/build.png?b=master)](https://scrutinizer-ci.com/g/thor-juhasz/phpunit-coverage-check/build-status/master)
+
 [![GitHub license](https://img.shields.io/github/license/thor-juhasz/phpunit-coverage-check.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/thor-juhasz/phpunit-coverage-check.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/releases/)
 
