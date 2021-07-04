@@ -1,5 +1,5 @@
 
-# phpunit-clover-test-coverage-check
+# phpunit-coverage-check
 
 [![Coverage Status](https://coveralls.io/repos/github/thor-juhasz/phpunit-coverage-check/badge.svg?branch=master)](https://coveralls.io/github/thor-juhasz/phpunit-coverage-check?branch=master)
 [![CI workflow](https://github.com/thor-juhasz/phpunit-coverage-check/actions/workflows/ci.yaml/badge.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/actions)
