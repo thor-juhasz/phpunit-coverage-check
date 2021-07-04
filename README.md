@@ -1,7 +1,7 @@
 
 # phpunit-clover-test-coverage-check
 
-![CI workflow](https://github.com/thor-juhasz/phpunit-coverage-check/actions/workflows/ci.yaml/badge.svg)
+[![CI workflow](https://github.com/thor-juhasz/phpunit-coverage-check/actions/workflows/ci.yaml/badge.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/actions)
 [![GitHub license](https://img.shields.io/github/license/thor-juhasz/phpunit-coverage-check.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/thor-juhasz/phpunit-coverage-check.svg)](https://github.com/thor-juhasz/phpunit-coverage-check/releases/)
 
