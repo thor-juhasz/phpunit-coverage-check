@@ -24,11 +24,11 @@ This library is loosely based on
     * [Use in GitHub workflow](#use-in-github-workflow)
     * [Run manually](#run-manually)
 - [Arguments](#arguments)
-  * [filename](#filename-smallrequiredsmall)
+  * [filename](#filename-required)
 - [Options](#options)
-    * [threshold](#threshold-smalloptionalsmall)
-    * [metric](#metric-smalloptionalsmall)
-    * [suppress-errors](#suppress-errors-smalloptionalsmall)
+    * [threshold](#threshold-optional)
+    * [metric](#metric-optional)
+    * [suppress-errors](#suppress-errors-optional)
 - [Output](#output)
 </details>
 
