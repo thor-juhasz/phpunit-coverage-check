@@ -1,0 +1,34 @@
+language: php
+
+os: linux
+
+dist: focal
+
+php:
+  - 7.4
+  - 8.0
+
+jobs:
+  fast_finish: true
+  include:
+    - name: "PHP nightly"
+      php: nightly
+      os: linux
+  allow_failures:
+    - php: nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+install: composer install
+
+script:
+  - composer validate --strict
+  - php -d xdebug.mode=coverage vendor/bin/phpunit --coverage-clover clover.xml
+  - ./phpunit-coverage-check -t 100 clover.xml
+
+branches:
+  only:
+    - master
+    - develop
